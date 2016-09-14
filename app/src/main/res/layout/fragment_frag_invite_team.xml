@@ -1,0 +1,113 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.delightteammodule.TEAM.CreateTeam.FragInviteTeam"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/LLTeamTextView"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="팀명"
+                android:textSize="36dp"
+                android:paddingTop="60dp"
+                android:id="@+id/TVTeamName"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="지금 바로 팀원을 초대하세요"
+                android:paddingTop="20dp"
+                android:gravity="center"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/LLTeamTextView"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/xml_border"
+            android:padding="4dp"
+            android:id="@+id/LLInviteView"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="초대"
+                android:textSize="16dp"
+                android:layout_marginLeft="6dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0/15"
+                android:gravity="right"
+                android:textSize="16dp"
+                android:layout_marginRight="6dp"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/xml_border"
+            android:layout_below="@id/LLInviteView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/LLTeamMemberInvite"
+                android:orientation="vertical"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RVTeamMemberInvite"
+                    >
+                </android.support.v7.widget.RecyclerView>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:text="친구 초대"
+                    android:textSize="20dp"
+                    />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btnCompleter"
+            android:text="완료"
+            android:textSize="30dp"
+            />
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="org.androidtown.delightteammodule.MATCH.MakeMatch.MakeMatch">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/AppBarLayout">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/ic_close_24dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/IVCancel"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:text="매치 개설"
+                    android:textColor="@color/colorDark"/>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnMakeMatch"
+            android:text="개설하기"
+            android:gravity="center"
+            android:background="@color/colorBright"
+            android:layout_alignParentBottom="true"/>
+
+      <org.androidtown.delightteammodule.ChanCustomViews.VerticalViewPager
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:id="@+id/VVVerticalViewPager"
+          android:layout_below="@id/AppBarLayout"
+          android:layout_above="@id/btnMakeMatch"
+          android:layout_margin="16dp">
+      </org.androidtown.delightteammodule.ChanCustomViews.VerticalViewPager>
+
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

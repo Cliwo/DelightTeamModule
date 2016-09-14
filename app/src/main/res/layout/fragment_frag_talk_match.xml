@@ -1,0 +1,54 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.delightteammodule.MATCH.MoreMatch.FragTalkMatch">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/RLMatchTalk">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/RLTalkBar"
+            >
+
+            <LinearLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/colorAccent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:id="@+id/LLTalk">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/ic_speechbubble_white"
+                    android:id="@+id/IVTalk"/>
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ETTalk"
+                android:layout_toLeftOf="@id/LLTalk"
+                android:hint="    이 곳에 대화를 입력하세요"
+                android:textSize="15sp"
+                android:background="@color/colorBright"
+                />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/RVMatchTalk"
+            android:layout_above="@id/RLTalkBar">
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,61 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.delightteammodule.SIGNUP.FragContract">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/LLSignUp"
+            android:layout_below="@id/AppBarLayout"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/logo1"
+                android:id="@+id/IVFootballNowLogo"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"/>
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp"
+                    android:id="@+id/TVContract"
+                    android:text="이 곳은 약관이 들어가는 곳입니다."
+                    android:textColor="@color/colorDark"
+                    android:textSize="13sp"
+                    android:background="@color/colorBright"/>
+            </android.support.v4.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="약관에 동의합니다."
+            android:padding="12dp"
+            android:id="@+id/TVAcceptContract"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/WHITE"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

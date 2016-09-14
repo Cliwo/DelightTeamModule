@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/RLNoticeEditView">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/AppBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/RLNoticeEdit"
+                >
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" >
+                </android.support.v7.widget.Toolbar>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/ic_keyboard_backspace_24dp"
+                    android:backgroundTint="@android:color/white"
+                    android:id="@+id/IVBackSpace"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    />
+            </RelativeLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/SVNoticeEdit"
+            android:layout_below="@id/AppBarLayout">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/RLNoticeEditContentView"
+                android:padding="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제목"
+                    android:id="@+id/TVTitle"
+                    android:textSize="28dp"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVTitle"
+                    android:id="@+id/TILTitle"
+                    android:padding="12dp"
+                    android:background="@drawable/xml_border"
+                    android:layout_margin="12dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/ETTitle"
+                        android:hint="이곳에 제목을 입력하세요"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="내용"
+                    android:id="@+id/TVContent"
+                    android:layout_below="@id/TILTitle"
+                    android:textSize="28dp"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:id="@+id/TILContent"
+                    android:layout_below="@id/TVContent"
+                    android:padding="12dp"
+                    android:background="@drawable/xml_border"
+                    android:layout_margin="12dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/ETContent"
+                        android:hint="이곳에 내용을 입력하세요"
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="메인 공지로 등록"
+                    android:id="@+id/CBRegisterMain"
+                    android:layout_below="@+id/TILContent"
+                    android:layout_alignLeft="@+id/TILContent"
+                    android:layout_alignStart="@+id/TILContent" />
+
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="등록"
+            android:id="@+id/btnAddNotice"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

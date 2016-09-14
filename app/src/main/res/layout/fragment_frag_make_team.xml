@@ -1,0 +1,35 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.delightteammodule.TEAM.CreateTeam.FragMakeTeam">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/RLMakeTeam"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:id="@+id/TVCreateTeam"
+            android:text="생성"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorBright"
+            />
+
+        <org.androidtown.delightteammodule.ChanCustomViews.VerticalViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/VVVerticalViewPager"
+            android:layout_above="@id/TVCreateTeam"
+            >
+        </org.androidtown.delightteammodule.ChanCustomViews.VerticalViewPager>
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:padding="2dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RLTeamDetailView"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LLEmblemAndInformation"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/logo1"
+            android:id="@+id/IVTeamEmblem"
+            android:layout_gravity="center"
+            />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="8dp"
+                android:id="@+id/LLTeamInfo"
+                android:layout_weight="0.58">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/TVTeamName"
+                        android:textSize="16sp"
+                        android:text="팀 풋볼나우"
+                        android:layout_marginLeft="5dp"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/IVNew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/_1"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/TVTeamName"
+                        android:layout_toEndOf="@+id/TVTeamName"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginStart="12dp" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/LLTeamDetails"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/ic_calender"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2016/04/20"
+                        android:textSize="13sp"
+                        android:layout_margin="3dp"
+                        android:id="@+id/TVTeamSomeDate"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/ic_manner_18dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="92"
+                        android:textSize="13sp"
+                        android:layout_margin="3dp"
+                        android:id="@+id/TVTeamMannerPoint"
+                        />
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/ic_group_24dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="14/20"
+                        android:textSize="13sp"
+                        android:layout_margin="3dp"
+                        android:id="@+id/TVTeamMemberNumber"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="평균 23.5세"
+                        android:textSize="13sp"
+                        android:layout_margin="3dp"
+                        android:id="@+id/TVTeamAverageAge"
+                        />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorBright"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_close_24dp"
+            android:backgroundTint="@color/colorAccent"
+            android:visibility="invisible"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="16dp"
+            android:id="@+id/IVDelete"/>
+
+    </RelativeLayout>
+</RelativeLayout>

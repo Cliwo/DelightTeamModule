@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TVTeamMannerPoint"
+        android:text="매너지수"
+        android:textSize="24dp"
+        android:gravity="center"
+        android:background="@drawable/xml_border"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TVTeamMemberNumber"
+        android:text="인원"
+        android:textSize="24dp"
+        android:gravity="center"
+        android:background="@drawable/xml_border"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TVTeamRecent"
+        android:text="활동"
+        android:textSize="24dp"
+        android:gravity="center"
+        android:background="@drawable/xml_border"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        />
+
+</LinearLayout>

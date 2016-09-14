@@ -1,0 +1,44 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.delightteammodule.TEAM.CreateTeam.FragTeamIntroduce"
+    android:tag="INTRODUCE">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/RLTeamIntroduceView"
+        android:padding="16dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/LLIntroduceView"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="팀 소개글"
+                android:id="@+id/TVIntroduce"
+                android:textSize="32dp"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ETIntroduce"
+                android:textSize="12dp"
+                android:hint="팀 소개글을 입력하세요."
+
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

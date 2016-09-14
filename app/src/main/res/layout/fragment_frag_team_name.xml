@@ -1,0 +1,76 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.delightteammodule.TEAM.CreateTeam.FragTeamName"
+    android:tag="NAME">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/RLTeamNameView"
+            android:layout_centerInParent="true"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="팀 만들기"
+                android:textSize="24sp"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="50dp"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/TVTitle"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="당신만의 팀을 만들어 보세요"
+                android:textSize="17sp"
+                android:id="@+id/TVSubtitle"
+                android:layout_below="@id/TVTitle"
+                android:textColor="@color/colorPrimary"
+                android:paddingTop="20dp"
+                />
+
+            <ImageView
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:layout_below="@id/TVSubtitle"
+                android:layout_margin="20dp"
+                android:id="@+id/IVTeamEmblem"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/xml_border"
+                />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_insert_photo_24dp"
+                android:layout_alignEnd="@id/IVTeamEmblem"
+                android:layout_alignRight="@id/IVTeamEmblem"
+                android:layout_alignTop="@id/IVTeamEmblem"
+                android:id="@+id/IVTeamSelect"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/IVTeamEmblem"
+                android:text="팀 이름을 입력하세요"
+                android:id="@+id/TVInputName"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,286 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.delightteammodule.TEAM.CreateTeam.FragTeamConfigure"
+    android:tag="CONFIGURE">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/RLTeamConfigureView"
+        android:padding="16dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/RLAccessConfigureView"
+            >
+
+            <ImageView
+                android:layout_width="112dp"
+                android:layout_height="112dp"
+                android:id="@+id/IVToggleAccessConfigure"
+                android:background="@drawable/ic_opening"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="누구나 이 팀에\n 가입할 수 있습니다."
+                android:textSize="13sp"
+                android:textColor="@color/colorDark"
+                android:id="@+id/TVAccessExplanation"
+                android:paddingBottom="20dp"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@id/IVToggleAccessConfigure"
+                android:layout_toEndOf="@id/IVToggleAccessConfigure" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LLRegionConfigureView"
+            android:orientation="vertical"
+            android:layout_below="@id/RLAccessConfigureView"
+            android:paddingTop="12dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="활동 지역 선택"
+                    android:textSize="20sp"
+                    android:id="@+id/TVRegionSelect"
+                    android:textColor="@color/colorDark"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="지역 추가"
+                    android:id="@+id/TVRegionAdd"
+                    android:textColor="@color/colorBlur"
+                    android:textSize="15sp"
+                    android:gravity="right"
+
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBright"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:layout_margin="6dp">
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:background="@color/colorBright"
+                        android:textColor="@color/colorBright"
+                        android:gravity="center"
+                        android:id="@+id/TVSelectedRegions0" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/ic_close_24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="2dp"
+                        android:id="@+id/IVRegionDelete0"
+                        android:backgroundTint="@color/colorBright"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:layout_margin="6dp">
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:background="@color/colorBright"
+                        android:textColor="@color/colorBright"
+                        android:gravity="center"
+                        android:id="@+id/TVSelectedRegions1" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/ic_close_24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="2dp"
+                        android:id="@+id/IVRegionDelete1"
+                        android:backgroundTint="@color/colorBright"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:layout_margin="6dp">
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:background="@color/colorBright"
+                        android:textColor="@color/colorBright"
+                        android:gravity="center"
+                        android:id="@+id/TVSelectedRegions2" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/ic_close_24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="2dp"
+                        android:id="@+id/IVRegionDelete2"
+                        android:backgroundTint="@color/colorBright"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LLHomeGroundConfigureView"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:layout_below="@id/LLRegionConfigureView"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="보유 홈 경기장"
+                        android:textSize="20sp"
+                        android:id="@+id/TVTeamHomeGround"
+                        android:textColor="@color/colorDark"
+                        />
+
+                    <Switch
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:id="@+id/SWOwnGround"
+                        android:layout_weight="4"
+                        android:checked="false" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorBright"
+                    android:paddingBottom="2dp"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/LLHomeGroundView"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/LLHomeGroundAddressConfigure"
+                    android:paddingTop="16dp"
+                    >
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:id="@+id/IVAddress"
+                        android:background="@drawable/ic_place_black_24dp"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="주소 입력"
+                        android:gravity="left"
+                        android:textSize="13sp"
+                        android:id="@+id/ETAddress"
+                        android:layout_toRightOf="@id/IVAddress"
+                        android:layout_marginLeft="72dp"
+                        />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/LLHomeGroundNicknameConfigure"
+                    android:orientation="horizontal"
+                    >
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="별칭"
+                        android:id="@+id/btnNickname"
+                        android:layout_weight="4"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="별칭을 입력하세요"
+                        android:gravity="left"
+                        android:layout_weight="1"
+                        android:textSize="13sp"
+                        android:id="@+id/ETNickname"
+                        />
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:id="@+id/RLMapView">
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.androidtown.delightteammodule">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="0ec1383019626ce5b4452d7d82050ebf" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.accountkit.ClientToken"
+            android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN" />
+        <meta-data
+            android:name="com.facebook.accountkit.ApplicationName"
+            android:value="@string/APP_NAME" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TEAM.Main.TeamMain"
+            android:label="@string/title_activity_team_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TEAM.More.TeamMore"
+            android:label="@string/title_activity_team_more"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".TEAM.CreateTeam.TeamCreate" />
+        <activity
+            android:name=".TEAM.MyTeam.TeamMyTeam"
+            android:label="@string/title_activity_team_my_team"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TEAM.Main.SearchAndFiilter.TeamSearch"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TEAM.MyTeam.Notice.NoticeDetail"
+            android:label="@string/title_activity_notice_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TEAM.MyTeam.Notice.NoticeList"
+            android:label="@string/title_activity_notice_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TEAM.MyTeam.Notice.NoticeEdit"
+            android:label="@string/title_activity_notice_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".TEAM.InviteFriend.TeamInviteFriend" />
+        <activity
+            android:name=".TEAM.MyTeam.Schedule.CreateSchedule"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MATCH.Main.MatchMain"
+            android:label="@string/title_activity_match_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MENU.MenuActivity"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MATCH.MakeMatch.MakeMatch"
+            android:label="@string/title_activity_make_match"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MATCH.MoreMatch.MoreMatch"
+            android:label="@string/title_activity_more_match"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MATCH.SortMatch.SortMatch"
+            android:label="@string/title_activity_sort_match"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MATCH.Review.ReviewMatch"
+            android:label="@string/title_activity_review_match"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TEAM.MyTeam.News.CreateNews"
+            android:label="@string/title_activity_create_news"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TEAM.MyTeam.News.NewsDetail"
+            android:label="@string/title_activity_news_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MATCH.BrowseMatch.BrowseMatch"
+            android:label="@string/title_activity_browse_match"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SIGNUP.SignUp"
+            android:label="@string/title_activity_signup"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MYINFORMATION.MyInformation"
+            android:label="@string/title_activity_my_information"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.kakao.auth.authorization.authcode.KakaoWebViewActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SIGNUP.KakaoSignUp"
+            android:label="@string/title_activity_kakao_sign_up"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".SIGNUP.FacebookSignUp"
+            android:label="@string/title_activity_facebook_sign_up"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.facebook.accountkit.ui.AccountKitActivity"
+            android:theme="@style/Theme.AccountKit"
+            tools:replace="android:theme" />
+        <activity
+            android:name=".SIGNUP.Welcome"
+            android:label="@string/title_activity_welcome"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MYINFORMATION.MyInformationEdit"
+            android:label="@string/title_activity_my_information_edit"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MATCH.MoreMatch.TalkMatch"
+            android:label="@string/title_activity_talk_match"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Gloabal.AddressAndLocation.MapSearchActivity"
+            android:label="@string/title_activity_map_search"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NOTIFICATION.Notification"
+            android:label="@string/title_activity_notification"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,87 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.delightteammodule.MATCH.MakeMatch.FragMatchSelectRepresentative">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="대표 팀 선택"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수정하기"
+                android:textSize="13sp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/TVTeamEdit"/>
+
+            <ImageView
+                android:layout_width="108dp"
+                android:layout_height="108dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/logo1"
+                android:layout_marginTop="72dp"
+                android:id="@+id/IVTeamLogo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="딜라잇 FC"
+                android:textSize="16sp"
+                android:id="@+id/TVTeamName"
+                android:textStyle="bold"
+                android:layout_below="@+id/IVTeamLogo"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/RVTeamMember">
+        </android.support.v7.widget.RecyclerView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/colorPrimaryDark"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_addfriend_gold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/IVAddTeamMember"
+                android:text="팀원 초대하기"
+                android:textColor="@color/WHITE"
+                android:padding="8dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">DelightTeamModule</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_team_main">TeamMain</string>
+    <string name="title_activity_team_more">TeamMore</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_team_my_team">TeamMyTeam</string>
+    <string name="title_activity_notice_detail">NoticeDetail</string>
+    <string name="title_activity_notice_list">NoticeList</string>
+    <string name="title_activity_transparent__noti">Transparent_Noti</string>
+    <string name="title_activity_match_main">MatchMain</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_make_match">MakeMatch</string>
+    <string name="title_activity_match_more">MatchMore</string>
+    <string name="title_activity_more_match">MoreMatch</string>
+    <string name="title_activity_sort_match">SortMatch</string>
+    <string name="title_activity_review_match">ReviewMatch</string>
+    <string name="title_activity_create_news">CreateNews</string>
+    <string name="title_activity_news_detail">NewsDetail</string>
+    <string name="title_activity_browse_match">BrowseMatch</string>
+    <string name="title_activity_signup">SIGNUP</string>
+    <string name="title_activity_my_information">MyInformation</string>
+    <string name="title_activity_kakao_sign_up">KakaoSignUp</string>
+
+    <string name="facebook_app_id">1130261690378470</string>
+    <string name="title_activity_facebook_sign_up">FacebookSignUp</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">8abf47379bfa942b7180a075a65efaab</string>
+    <string name="APP_NAME">FootballNow</string>
+    <string name="title_activity_welcome">Welcome</string>
+    <string name="title_activity_my_information_edit">MyInformationEdit</string>
+    <string name="title_activity_talk_match">TalkMatch</string>
+    <string name="title_activity_map_search">MapSearchActivity</string>
+    <string name="title_activity_notification">Notification</string>
+</resources>

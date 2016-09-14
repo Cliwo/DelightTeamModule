@@ -1,0 +1,56 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.delightteammodule.MATCH.Search.FragMatchSearch">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/RLMatchSearch">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/RLMatchSearchSortBar"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="8dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/ic_sorting"
+                android:layout_centerVertical="true"
+                android:backgroundTint="@color/colorAccent"
+                android:id="@+id/IVSort"
+                />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="8dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_search_black_24dp"
+                android:layout_centerVertical="true"
+                android:backgroundTint="@color/colorAccent"
+                android:id="@+id/IVSearch"
+                />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/RVMatchList"
+            android:layout_below="@id/RLMatchSearchSortBar">
+        </android.support.v7.widget.RecyclerView>
+
+
+
+    </RelativeLayout>
+</FrameLayout>

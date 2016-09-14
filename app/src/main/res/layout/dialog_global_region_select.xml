@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/LLRegionSelectButton">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorBright"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="취소"
+                android:id="@+id/TVCancel"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/colorAccent"
+                android:padding="12dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="확인"
+                android:textSize="20sp"
+                android:id="@+id/TVAccept"
+                android:gravity="center"
+                android:textColor="@color/colorAccent"
+                android:background="@color/colorPrimary"
+                android:padding="12dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/LLRegionSelect"
+        android:orientation="vertical"
+        android:layout_above="@id/LLRegionSelectButton"
+        android:paddingTop="4dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="지역 선택"
+            android:layout_marginLeft="16dp"
+            android:textSize="24sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="도/시"
+                android:id="@+id/TVLarge"
+                android:padding="12dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/WHITE"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="시/군/구"
+                android:id="@+id/TVSmall"
+                android:padding="12dp"/>
+
+        </LinearLayout>
+
+        <org.androidtown.delightteammodule.TEAM.CreateTeam.UnScrolledViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/VPRegionSelect"></org.androidtown.delightteammodule.TEAM.CreateTeam.UnScrolledViewPager>
+    </LinearLayout>
+
+</RelativeLayout>

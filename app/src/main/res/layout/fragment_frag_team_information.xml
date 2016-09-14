@@ -1,0 +1,468 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.delightteammodule.TEAM.MyTeam.FragTeamInformation">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/RLTeamInforView">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/SVTeamInfomation">
+
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/RLTeamInformationView"
+        android:padding="8dp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LLTeamNameAndEmblem"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/sample_emblem_circle"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/LLTeamNameAndLeader"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="22dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="딜라잇FC"
+                    android:textSize="20dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="개설자 : 오진우(jinoo)"
+                    android:textSize="20dp"
+
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LLTeamPositionView"
+            android:layout_below="@id/LLTeamNameAndEmblem"
+            android:padding="6dp"
+            >
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_sample_24dp"
+                android:id="@+id/IVForward"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:id="@+id/TVForward"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:paddingLeft="6dp"
+                />
+
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_sample_24dp"
+                android:id="@+id/IVMidFielder"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:id="@+id/TVMidFielder"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:paddingLeft="6dp"
+                />
+
+
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_sample_24dp"
+                android:id="@+id/IVDefender"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:id="@+id/TVDefender"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:paddingLeft="6dp"
+                />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_sample_24dp"
+                android:id="@+id/IVGoalKeeper"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:id="@+id/TVGoalKeeper"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:paddingLeft="6dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LLTeamAgeView"
+            android:layout_below="@id/LLTeamPositionView"
+            android:padding="6dp"
+            >
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_sample_24dp"
+                android:id="@+id/IV10"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:id="@+id/TV10"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:paddingLeft="6dp"
+                />
+
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_sample_24dp"
+                android:id="@+id/IV20"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:id="@+id/TV20"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:paddingLeft="6dp"
+                />
+
+
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_sample_24dp"
+                android:id="@+id/IV30"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:id="@+id/TV30"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:paddingLeft="6dp"
+                />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_sample_24dp"
+                android:id="@+id/IV40"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:id="@+id/TV40"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:paddingLeft="6dp"
+                />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_sample_24dp"
+                android:id="@+id/IV50"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/TV50"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:paddingLeft="6dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LLTeamDetails"
+            android:layout_below="@id/LLTeamAgeView"
+            android:padding="6dp"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/LLTeamMemberNumber">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="팀 인원 : "
+                    android:textSize="18dp"
+                    android:id="@+id/TVTeamMemberNumber"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20/24"
+                    android:textSize="20dp"
+                    android:id="@+id/TVTeamMemberNumberModify"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/LLTeamMannerPoint">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="매너지수 : "
+                    android:textSize="18dp"
+                    android:id="@+id/TVTeamMannerPoint"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="83"
+                    android:textSize="20dp"
+                    android:id="@+id/TVTeamMannerPointModify"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/LLTeamRegion">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="활동지역 : "
+                    android:textSize="18dp"
+                    android:id="@+id/TVTeamRegion"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="수원시"
+                    android:textSize="20dp"
+                    android:id="@+id/TVTeamRegionModify"
+                    />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/RVLocationButton"
+                ></android.support.v7.widget.RecyclerView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/LLTeamHomeGround">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="팀 경기장 : "
+                    android:textSize="18dp"
+                    android:id="@+id/TVTeamHomeGround"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아주대학교 운동장"
+                    android:textSize="20dp"
+                    android:id="@+id/TVTeamHomeGroundModify"
+                    />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mapView"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/LLTeamMemberView"
+            android:layout_below="@id/LLTeamDetails"
+            android:layout_marginTop="8dp"
+            android:padding="6dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/TVTeamMember"
+                android:text="팀원"
+                android:textSize="18dp"
+                android:layout_marginLeft="4dp"
+                />
+
+             <android.support.v7.widget.RecyclerView
+                 android:layout_width="match_parent"
+                 android:layout_height="110dp"
+                 android:id="@+id/RVTeamMember"
+                 ></android.support.v7.widget.RecyclerView>
+            <!--현재 0dp-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/LLTeamExplanationView"
+            android:orientation="vertical"
+            android:layout_below="@id/LLTeamMemberView"
+            android:layout_marginTop="8dp"
+            android:padding="6dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/TVTeamExPlanationView"
+                android:text="팀설명"
+                android:textSize="18dp"
+                android:layout_marginLeft="4dp"
+                />
+            <TextView
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:text="안녕하세요 저희팀은 중 실력의 fc조큐구요 3분 입금순으로 받습니다 하나 020284 23 418234 조선규 2만원입니다"
+                android:textSize="17dp"
+                android:padding="2dp"
+                android:background="@drawable/xml_border"
+                android:layout_marginBottom="2dp"
+                android:id="@+id/TVTeamExPlanationDetailView"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="팀삭제"
+            android:id="@+id/TVTeamDelete"
+            android:layout_below="@id/LLTeamExplanationView"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/TVTeamDelete"
+                >
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LLTeamInformationButtons"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="공지목록보기"
+            android:id="@+id/btnShowNotice"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="친구초대"
+            android:id="@+id/btnInviteFriend"/>
+
+    </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>
