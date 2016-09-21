@@ -59,7 +59,7 @@
             android:name=".TEAM.MyTeam.Notice.NoticeEdit"
             android:label="@string/title_activity_notice_list"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".TEAM.InviteFriend.TeamInviteFriend" />
+        <activity android:name=".Gloabal.InviteFriend.InviteFriend" />
         <activity
             android:name=".TEAM.MyTeam.Schedule.CreateSchedule"
             android:theme="@style/AppTheme.NoActionBar" />

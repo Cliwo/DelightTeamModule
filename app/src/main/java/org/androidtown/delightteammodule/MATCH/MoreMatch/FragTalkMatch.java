@@ -1,18 +1,26 @@
 package org.androidtown.delightteammodule.MATCH.MoreMatch;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import org.androidtown.delightteammodule.ChanRecycleAdapter.CustomViewFactory;
 import org.androidtown.delightteammodule.ChanRecycleAdapter.RecyclerAdapter;
+import org.androidtown.delightteammodule.Connection.DataSetUpCallback;
+import org.androidtown.delightteammodule.Connection.HttpUtilSend;
 import org.androidtown.delightteammodule.Gloabal.DateAndTime.ChanDate;
 import org.androidtown.delightteammodule.Gloabal.DateAndTime.ChanTime;
 import org.androidtown.delightteammodule.MATCH.Items.Data.MatchTalkData;
@@ -33,6 +41,8 @@ public class FragTalkMatch extends Fragment {
     RecyclerView talkView;
     RecyclerAdapter<MatchTalkView, MatchTalkData> talkAdapter;
 
+    EditText ETTalk;
+    LinearLayout LLTalk;
 
     public FragTalkMatch() {
         // Required empty public constructor
@@ -45,6 +55,35 @@ public class FragTalkMatch extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_frag_talk_match, container, false);
         MatchTalkData.context=getContext();
+        setRecyclerView(view);
+        return view;
+    }
+    public void setViews(View view)
+    {
+        ETTalk = (EditText)view.findViewById(R.id.ETTalk);
+        ETTalk.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                LLTalk.callOnClick();
+                return true;
+            }
+        });
+        LLTalk = (LinearLayout)view.findViewById(R.id.LLTalk);
+        LLTalk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hideSoftKeyboard();
+                makeTalk();
+            }
+        });
+    }
+
+    private void hideSoftKeyboard() {
+        InputMethodManager imm = (InputMethodManager)getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(ETTalk.getWindowToken(), 0);
+    }
+    public void setRecyclerView(View view)
+    {
         talkView = (RecyclerView) view.findViewById(R.id.RVMatchTalk);
         talkAdapter = new RecyclerAdapter<>(R.layout.item_match_talk, new CustomViewFactory<MatchTalkView>() {
             @Override
@@ -76,9 +115,7 @@ public class FragTalkMatch extends Fragment {
         talkView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         setRecyclerViewWithData();
-        return view;
     }
-
     public void setRecyclerViewWithData() {
         talkAdapter.ClearAllData();
         for(MatchTalkData data : MoreMatch.detailData.matchTalkData)
@@ -106,11 +143,18 @@ public class FragTalkMatch extends Fragment {
 
     public void makeTalk()
     {
-
+        String message = ETTalk.getText().toString();
+        /*
+        HttpUtilSend send = new HttpUtilSend(new DataSetUpCallback() {
+            @Override
+            public void onDataReceived(String result) {
+                //새로고침 효과
+                setRecyclerViewWithData();
+            }
+        });
+        send.execute("URL");
+        */
+        ETTalk.setText("");
     }
 
-    public void makeReply()
-    {
-
-    }
 }

@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
+import org.androidtown.delightteammodule.Connection.DataSetUpCallback;
+import org.androidtown.delightteammodule.Connection.HttpUtilSend;
 import org.androidtown.delightteammodule.R;
 
 /**
@@ -16,9 +18,23 @@ public class ChanPopUpMenuDialog_Person extends Dialog {
 
     ImageView IVCancel;
 
-    public ChanPopUpMenuDialog_Person(Context context) {
+    public ChanPopUpMenuDialog_Person(Context context, String nickName) {
         super(context);
+        /*
+        HttpUtilSend send = new HttpUtilSend(new DataSetUpCallback() {
+            @Override
+            public void onDataReceived(String result) {
+                onConnectionComplete(result);
+            }
+        });
+        send.execute("URL",nickName);
+        URL -> 서버 URL
+        */
+    }
 
+    public void onConnectionComplete(String result)
+    {
+        //여기서 Data 받았을 때 처리
     }
 
     @Override

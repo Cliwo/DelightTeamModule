@@ -3,25 +3,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
-    tools:context="org.androidtown.delightteammodule.TEAM.InviteFriend.TeamInviteFriend">
+    tools:context=".Gloabal.InviteFriend.InviteFriend">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="취소"
-        android:id="@+id/TVCancel"
-        android:layout_alignParentTop="true"
-        android:textSize="24dp"
-        android:gravity="right"/>
-
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:id="@+id/RLTopBar"
+        >
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/ic_keyboard_backspace_24dp"
+            android:backgroundTint="@color/WHITE"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/IVBackSpace" />
+    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/TVCancel"
-        >
-        <include layout="@layout/fragment_frag_invite_team" />
+        android:orientation="vertical"
+        android:layout_below="@id/RLTopBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="팀원 초대"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="X명 초대"
+                android:textSize="13sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:gravity="center_vertical|right"
+                android:id="@+id/TVCurrentInviteNumber"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@color/colorBright"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/RVInvite"></android.support.v7.widget.RecyclerView>
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginBottom="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="초대하기"
+            android:textSize="18sp"
+            android:textColor="@color/WHITE"
+            android:gravity="center"
+            android:id="@+id/TVInvite"
+            android:background="@color/colorPrimary"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="초기화"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:id="@+id/TVClear"
+            android:background="@color/colorBright"
+            />
+
+    </LinearLayout>
 
 </RelativeLayout>

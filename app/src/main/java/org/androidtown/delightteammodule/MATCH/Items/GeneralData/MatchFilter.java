@@ -17,4 +17,5 @@ public class MatchFilter implements Serializable{
     public String formation;
     public String formationText;
     public int manner;
+    public boolean levelCheck[]= new boolean[5];
 }

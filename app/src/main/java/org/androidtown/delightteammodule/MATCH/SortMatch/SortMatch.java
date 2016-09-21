@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.Spinner;
@@ -45,6 +46,7 @@ public class SortMatch extends AppCompatActivity implements View.OnClickListener
     TextView TVTimeFrom;
     TextView TVTimeTo;
     TextView TVSet;
+    CheckBox[] CBMatchLevel = new CheckBox[5];
 
     //아래에 데이터가 모인다.
     MatchFilter mData;
@@ -69,6 +71,12 @@ public class SortMatch extends AppCompatActivity implements View.OnClickListener
 
     public void setViews()
     {
+        CBMatchLevel[0] = (CheckBox)findViewById(R.id.checkbox01);
+        CBMatchLevel[1] = (CheckBox)findViewById(R.id.checkbox02);
+        CBMatchLevel[2] = (CheckBox)findViewById(R.id.checkbox03);
+        CBMatchLevel[3] = (CheckBox)findViewById(R.id.checkbox04);
+        CBMatchLevel[4] = (CheckBox)findViewById(R.id.checkbox05);
+
         NSVMatchSort = (NestedScrollView)findViewById(R.id.NSVMatchSort);
 
         IVCancel = (ImageView)findViewById(R.id.IVCancel);
@@ -204,6 +212,10 @@ public class SortMatch extends AppCompatActivity implements View.OnClickListener
                 mData.region1 = regionData[0];
                 mData.region2= regionData[1];
                 mData.region3= regionData[2];
+                for(int i=0;i<5; i++) {
+                    mData.levelCheck[i] = CBMatchLevel[i].isChecked();
+                    Log.d("Filter", "Filter value " + i + " : " + CBMatchLevel[i].isChecked());
+                }
                 intent.putExtra("Filter", mData);
                 setResult(1234, intent); //1234 라고 막 넣은 이유는, Result 코드와 Request 코드가 다른데, 어짜피 Result 는 한종류밖에 없어서, 코드로 분기할 필요 X
                 finish();

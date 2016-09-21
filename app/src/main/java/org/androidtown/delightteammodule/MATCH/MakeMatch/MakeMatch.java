@@ -65,8 +65,7 @@ public class MakeMatch extends AppCompatActivity {
         verticalViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                if (position == 2 && matchFormationAndManner.checkCompleted() && matchTitleAndLocation.checkCompleted())
-                {
+                if (position == 2 && matchFormationAndManner.checkCompleted() && matchTitleAndLocation.checkCompleted()) {
                     btnMakeMatch.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.colorPrimary, null));
                     btnMakeMatch.setTextColor(ResourcesCompat.getColor(getResources(), R.color.WHITE, null));
                 }
@@ -79,18 +78,6 @@ public class MakeMatch extends AppCompatActivity {
                     //마지막 page이며, 모든 page가 정상적으로 채워졌을때.
                     btnMakeMatch.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.colorPrimary, null));
                     btnMakeMatch.setTextColor(ResourcesCompat.getColor(getResources(), R.color.WHITE, null));
-                    btnMakeMatch.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            //한 번 complete 된 상황으로 만들고, 지운다음에 다음으로 넘어가버리는걸 방지, 항상 Complete 되어있어야 넘어갈수 있다.
-                            if (FragMatchTitleAndLocation.isCompleted && FragMatchFormationAndManner.isCompleted) {
-                                completeMakingMatch();
-                            } else {
-                                ((TextView) v).setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.colorBright, null));
-                                ((TextView) v).setTextColor(ResourcesCompat.getColor(getResources(), R.color.colorDark, null));
-                            }
-                        }
-                    });
                 }
             }
 
@@ -107,7 +94,23 @@ public class MakeMatch extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
+        btnMakeMatch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //한 번 complete 된 상황으로 만들고, 지운다음에 다음으로 넘어가버리는걸 방지, 항상 Complete 되어있어야 넘어갈수 있다.
+                if(!matchTitleAndLocation.checkCompleted()) {
+                    ((TextView) v).setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.colorBright, null));
+                    ((TextView) v).setTextColor(ResourcesCompat.getColor(getResources(), R.color.colorDark, null));
+                    return;
+                }
+                if(!matchFormationAndManner.checkCompleted()) {
+                    ((TextView) v).setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.colorBright, null));
+                    ((TextView) v).setTextColor(ResourcesCompat.getColor(getResources(), R.color.colorDark, null));
+                    return;
+                }
+                completeMakingMatch();
+            }
+        });
     }
 
     public void completeMakingMatch()

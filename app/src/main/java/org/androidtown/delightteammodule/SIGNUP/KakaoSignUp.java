@@ -39,6 +39,7 @@ import org.androidtown.delightteammodule.Connection.DataSetUpCallback;
 import org.androidtown.delightteammodule.Connection.HttpUtilSend;
 import org.androidtown.delightteammodule.Gloabal.AddressAndLocation.ChanRegionSelectDialog;
 import org.androidtown.delightteammodule.Gloabal.AddressAndLocation.GlobalRegionData;
+import org.androidtown.delightteammodule.Gloabal.AddressAndLocation.RegionSelectCallback;
 import org.androidtown.delightteammodule.Gloabal.DateAndTime.ChanDate;
 import org.androidtown.delightteammodule.MENU.MenuActivity;
 import org.androidtown.delightteammodule.MYINFORMATION.MyInformationData;
@@ -169,14 +170,17 @@ public class KakaoSignUp extends AppCompatActivity implements View.OnClickListen
     }
     public void checkValidity()
     {
+        Log.d("Validity", "Check");
         if(ETNickName.getText()==null || cDate == null) {
             TVSignUp.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             return;
         }
-        if(!ETNickName.getText().toString().equals("") &&  regionData[0] != null && checkBirthValidity())
+        if(regionData[0] != null && checkBirthValidity() && ETNickName.getText().length()>1)
             TVSignUp.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-        else
+        else {
+            Log.d("Validity", ETNickName.getText().toString());
             TVSignUp.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+        }
     }
     public void setViews()
     {
@@ -189,12 +193,12 @@ public class KakaoSignUp extends AppCompatActivity implements View.OnClickListen
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                checkValidity();
+
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                checkValidity();
             }
         });
         TVBirth = (TextView)findViewById(R.id.TVBirth);
@@ -211,9 +215,9 @@ public class KakaoSignUp extends AppCompatActivity implements View.OnClickListen
                         cDate.month = monthOfYear + 1;
                         cDate.day = dayOfMonth;
                         TVBirth.setText(cDate.getDateByFormat(ChanDate.WITH_KOREAN));
+                        checkValidity();
                     }
                 }, date.year, date.month, date.day);
-                checkValidity();
                 dialog.show();
             }
         });
@@ -226,12 +230,12 @@ public class KakaoSignUp extends AppCompatActivity implements View.OnClickListen
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                checkValidity();
+
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                checkValidity();
             }
         });
         TVSignUp = (TextView)findViewById(R.id.TVSignUp);
@@ -488,6 +492,12 @@ public class KakaoSignUp extends AppCompatActivity implements View.OnClickListen
             //지역 선택
             ChanRegionSelectDialog dialog = new ChanRegionSelectDialog();
             dialog.setCallBackViewAndData(TVSelectedRegions, IVRegionDelete, regionData);
+            dialog.setCallback(new RegionSelectCallback() {
+                @Override
+                public void onAcceptPressed() {
+                    checkValidity();
+                }
+            });
             dialog.show(getSupportFragmentManager(), "");
             break;
 

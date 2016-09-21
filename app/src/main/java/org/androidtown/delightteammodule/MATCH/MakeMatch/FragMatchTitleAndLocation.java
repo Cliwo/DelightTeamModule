@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import net.daum.mf.map.api.MapPOIItem;
 import net.daum.mf.map.api.MapPoint;
@@ -42,8 +43,6 @@ public class FragMatchTitleAndLocation extends Fragment {
     //날짜 정보가 담길 object
     ChanDate dateData;
     ChanTime timeData;
-
-    static boolean isCompleted= true;
 
     public FragMatchTitleAndLocation() {
         // Required empty public constructor
@@ -104,7 +103,7 @@ public class FragMatchTitleAndLocation extends Fragment {
             }
         });
         tvDatePicker= (TextView)view.findViewById(R.id.TVDatePicker);
-        tvDatePicker.setText(ChanDate.getCurrentDateByFormat(ChanDate.SLASH_SLASH_SLASH_WITH_ZERO));
+        //tvDatePicker.setText(ChanDate.getCurrentDateByFormat(ChanDate.SLASH_SLASH_SLASH_WITH_ZERO));
         tvTimePicker= (TextView)view.findViewById(R.id.TVTimePicker);
         //에러 발생가능 (처음 테스트하는 디바이스에서)
         mapView = new MapView(getActivity());
@@ -183,10 +182,26 @@ public class FragMatchTitleAndLocation extends Fragment {
 
     public boolean checkCompleted()
     {
-        if(MakeMatch.data.matchAddress!=null)
-            MakeMatch.data.matchAddress.nickName=TVNickName.getText().toString();
-        //위가 올바르면 isCompleted true로 하고 리턴
-        return isCompleted;
+        if(ETTitle.getText().toString().length() < 2 )
+        {
+            Toast.makeText(getContext(),"제목이 올바르지 않습니다.",Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if(MakeMatch.data.matchAddress == null )
+        {
+            Toast.makeText(getContext(),"위치를 선택해주세요",Toast.LENGTH_LONG).show();
+            return false;}
+        if(MakeMatch.data.cDate == null)
+        {
+            Toast.makeText(getContext(),"경기 날짜가 올바르지 않습니다.",Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if(MakeMatch.data.cTime == null )
+        {
+            Toast.makeText(getContext(),"경기 시간이 올바르지 않습니다.",Toast.LENGTH_LONG).show();
+            return false;
+        }
+        return true;
     }
 
 }

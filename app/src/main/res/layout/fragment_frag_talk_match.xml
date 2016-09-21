@@ -39,6 +39,7 @@
                 android:layout_toLeftOf="@id/LLTalk"
                 android:hint="    이 곳에 대화를 입력하세요"
                 android:textSize="15sp"
+                android:singleLine="true"
                 android:background="@color/colorBright"
                 />
         </RelativeLayout>

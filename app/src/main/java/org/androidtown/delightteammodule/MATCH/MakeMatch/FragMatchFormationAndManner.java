@@ -19,6 +19,7 @@ import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import org.androidtown.delightteammodule.R;
 
@@ -28,9 +29,6 @@ import java.util.Calendar;
  * A simple {@link Fragment} subclass.
  */
 public class FragMatchFormationAndManner extends Fragment implements RadioButton.OnClickListener {
-
-    static boolean isCompleted=true;
-
     public RadioButton[] radioButtons = new RadioButton[5];
     public Spinner SPMatchFormation;
     public Spinner SPMatchFormationText;
@@ -72,6 +70,7 @@ public class FragMatchFormationAndManner extends Fragment implements RadioButton
                 MakeMatch.data.matchManner = seekBar.getProgress()+"";
             }
         });
+        MakeMatch.data.matchManner = 0+"";
     }
 
     @Override
@@ -148,7 +147,7 @@ public class FragMatchFormationAndManner extends Fragment implements RadioButton
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 MakeMatch.data.matchFormationText = parent.getItemAtPosition(position).toString();
-                Log.d("SpinnerSelected", "스피너(Text)에서 값이 선택됨 : "+MakeMatch.data.matchFormationText);
+                Log.d("SpinnerSelected", "스피너(Text)에서 값이 선택됨 : " + MakeMatch.data.matchFormationText);
             }
 
             @Override
@@ -156,11 +155,19 @@ public class FragMatchFormationAndManner extends Fragment implements RadioButton
 
             }
         });
+        MakeMatch.data.matchFormation = "3 vs 3";
+        MakeMatch.data.matchFormationIntValue = 0;
+        MakeMatch.data.matchFormationText = "풋살";
     }
 
     public boolean checkCompleted()
     {
-        return isCompleted;
+        if(MakeMatch.data.matchLevel == null || MakeMatch.data.matchLevel.length()<1)
+        {
+            Toast.makeText(getContext(), "경기 수준을 선택해 주세요.",Toast.LENGTH_LONG).show();
+            return false;
+        }
+        return true;
     }
 
 }

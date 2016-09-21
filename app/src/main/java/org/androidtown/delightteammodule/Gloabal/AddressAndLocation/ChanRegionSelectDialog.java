@@ -27,6 +27,7 @@ import org.w3c.dom.Text;
  */
 public class ChanRegionSelectDialog extends DialogFragment {
 
+    RegionSelectCallback callback;
     FragRegionLargeScope largeScope;
     FragRegionSmallScope smallScope;;
 
@@ -88,6 +89,11 @@ public class ChanRegionSelectDialog extends DialogFragment {
         return view;
     }
 
+    public void setCallback(RegionSelectCallback callback)
+    {
+        this.callback=callback;
+    }
+
     public void setWidthAndHeight()
     {
         WindowManager.LayoutParams layoutParams =getDialog().getWindow().getAttributes();
@@ -123,6 +129,8 @@ public class ChanRegionSelectDialog extends DialogFragment {
                 }
             }
         }
+        if(callback!=null)
+            callback.onAcceptPressed();
         dismiss();
     }
 

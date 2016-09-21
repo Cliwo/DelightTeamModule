@@ -1,69 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
-   >
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/LLTeamMember"
-        android:padding="4dp">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/RLTeamMember"
+    android:padding="4dp">
 
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:background="@drawable/sample_emblem_circle"
-            android:id="@+id/IVTeamEmblem"
+            android:background="@drawable/ic_user_blank_40dp"
+            android:id="@+id/IVMemberEmblem"
+            android:layout_centerHorizontal="true"
             />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/LLMemberNameAndNickName"
-            android:layout_marginLeft="8dp"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/TVName"
-                android:text="오진우"/>
-
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/ic_redround"
+            android:id="@+id/IVMemberAction"
+            android:layout_alignLeft="@id/IVMemberEmblem"
+            android:layout_alignTop="@id/IVMemberEmblem"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/TVNickName"
-                android:text="jinooaction"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="right"
-            android:id="@+id/LLAgeAndBanish"
-            android:background="#00ffffff">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/TVAge"
-                android:text="29세"
-                android:layout_marginRight="4dp"/>
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:id="@+id/IVBanish"
-                android:background="@drawable/ic_close_24dp"
-                />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-
-</LinearLayout>
+                android:text="jinooaction"
+                android:layout_below="@id/IVMemberEmblem"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp"
+                android:paddingTop="4dp"/>
+</RelativeLayout>

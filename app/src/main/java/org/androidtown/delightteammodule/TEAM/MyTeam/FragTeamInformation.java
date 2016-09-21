@@ -20,7 +20,7 @@ import org.androidtown.delightteammodule.ChanRecycleAdapter.CustomViewFactory;
 import org.androidtown.delightteammodule.ChanRecycleAdapter.RecyclerAdapter;
 import org.androidtown.delightteammodule.MYINFORMATION.MyInformationData;
 import org.androidtown.delightteammodule.R;
-import org.androidtown.delightteammodule.TEAM.InviteFriend.TeamInviteFriend;
+import org.androidtown.delightteammodule.Gloabal.InviteFriend.InviteFriend;
 import org.androidtown.delightteammodule.TEAM.Items.Data.TeamMemberSimpleData;
 import org.androidtown.delightteammodule.TEAM.Items.GeneralData.TeamDataWithMembers;
 import org.androidtown.delightteammodule.TEAM.Items.View.TeamMemberSimpleView;
@@ -120,7 +120,7 @@ public class FragTeamInformation extends Fragment {
         btnInviteFriend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), TeamInviteFriend.class);
+                Intent intent = new Intent(v.getContext(), InviteFriend.class);
                 startActivityForResult(intent, ActivityCode.InviteFriend_COEE);
             }
         });
@@ -185,7 +185,7 @@ public class FragTeamInformation extends Fragment {
         teamMemberViewAdapter= new RecyclerAdapter<>(R.layout.item_team_simple_member, new CustomViewFactory<TeamMemberSimpleView>() {
             @Override
             public TeamMemberSimpleView createViewHolder(View layout, ViewGroup parent) {
-                TeamMemberSimpleView view =new TeamMemberSimpleView(layout);
+                TeamMemberSimpleView view =new TeamMemberSimpleView(layout, TeamMemberSimpleView.NORMAL);
                 return view;
             }
         });
